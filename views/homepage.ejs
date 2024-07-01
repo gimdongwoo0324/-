@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>지르플란트 치과</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        a{
+            position:relative;
+            float: right
+        }
+
+        .one {
+            
+            background-image:url(https://takahashi-dendendentaro.com/wp-content/uploads/2023/06/access_img01.jpg);
+            width: 100%;
+            height: 718px;
+            opacity: 0.5;
+            z-index: -1;
+   
+        }
+
+        .header {
+            display:flex;
+            width: 2080px;
+            margin: auto;
+          
+            height: 86px;
+            background: lightskyblue;
+            background-size: cover;
+        }
+
+        .nav {
+            display: flex;
+            margin-left: 150px;
+            justify-content:flex-end;
+            line-height: 86px;
+            width:calc(1280px - 300px);
+            color: #fff;
+      
+            
+        }
+
+        .nav > li{
+            display: flex;
+            margin-left: 84px;
+            font-size: 20px;
+        }
+
+        .nav > li > button{
+            margin-left: 84px;
+            font-size:20px;
+            cursor: pointer;
+        }
+
+
+        h1 {
+            position: relative;
+            left: 500px;
+            bottom: 350px;
+            color: white;
+            font-size: 40px;
+            animation-name: scale-2;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      opacity: 0
+
+
+    }
+
+    p {
+        
+            position: relative;
+            left: 500px;
+            bottom: 300px;
+            color: white;
+            font-size: 30px;
+            animation-name: scale-3;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            opacity: 0
+        }
+    
+@keyframes scale-2 {
+      0% {
+    }
+        
+        40% {
+      opacity: 1
+        }
+            100%{
+                opacity: 1
+            }
+    }
+
+
+
+@keyframes scale-3 {
+    0%{
+
+    }
+    40% {
+      opacity: 1
+        }
+            100%{
+                opacity: 1
+            }
+
+}
+
+
+    </style>
+</head>
+
+
+<body>
+    <div class="wrap">
+        <div class="one">
+            <div class="header">
+                <ul class="nav">
+                    <li><a href="#" style="color: white;left: 500px">HOME</a></li>
+                    <li><a href="#" style="color: white;left: 500px">ABOUT</a></li>
+                    <li><a href="#" style="color: white;left: 500px">SERVICE</a></li>
+                    <li><a href="#" style="color: white;left: 500px">CONTACT</a></li>
+                    <li><a href="/login" style="color: white;left: 500px;cursor:pointer"><button style="cursor:pointer;color:aqua;border:7px solid lightcyan;font-size: 20px;background: lightcyan;border-radius: 5px;">LOGIN</button></a></li>
+                </ul>
+        
+            </div>
+         
+        </div>
+    </div>
+    <h1>지르플란트 치과</h1>
+    <p>친절하고 안전하게 진찰해드립니다.</p>
+</body>
+</html>
