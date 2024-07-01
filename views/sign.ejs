@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>지르플란트 치과</title>
+    <style>
+        body {
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            height: 100vh;
+  
+        }
+
+        h1 {
+            color: lightgray;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+        [type=email] {
+            position: relative;
+            width: 100%;
+
+            margin-bottom: 20px;
+            padding: 20px 10px 10px;
+
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid #999;
+            outline: none
+        }
+
+        [type=password] {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 20px 10px 10px;
+        
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid #999;
+            outline: none
+        }
+
+
+        [type=submit] {
+            width: 100%;
+            height: 50px;
+            background-color: var(--basis-font-color, lightskyblue);
+            color: white;
+            font-size: 1.5rem;
+            border: 0;
+            border-radius: 15px;
+        
+        }
+
+        [type=email]:focus + label{
+            top: 0;
+            font-size: 0.9rem;
+            color: lightskyblue;
+            outline: none
+        }
+
+        [type=password]:focus + label{
+            top: 0;
+            font-size: 0.9rem;
+            color: lightskyblue;
+            outline: none
+            
+        }
+
+        [type=submit]:hover{
+            box-shadow: 0px 0px 2px 2px lightblue;
+        }
+
+        label {
+       
+            position: absolute;
+            font-size: 1.2rem;
+            top: 10px;
+            color: #999;
+            transition: 0.5s;
+        }
+        
+        .int-area {
+            width: 400px;
+            position: relative;
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="container" style="
+        background: url(https://cdn.motherhood.com.my/wp-content/uploads/2023/02/28114916/oral-health.jpg) no-repeat center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        position: absolute;
+        z-index: -1;
+        background-size: cover;
+        ">
+    </div>
+ 
+    <form>
+        <div class="form">
+            <h1>회원가입</h1>
+            <div class="int-area">
+            <input id="signUpEmail" type="email" name="email" autocomplete="on" required style="font-size:20px">
+            <label>이메일</label><br>
+        </div>
+            <div class="int-area">
+            <input id="signUpPassword" type=password name="pw" autocomplete="on" required style="font-size:20px">
+            <label>비밀번호</label><br>
+            </div>
+            <button type="submit" id="signUpButton">계정 추가</button><br>
+            
+        </div>
+    </form>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDqraVxM6-putyFi9V7HegjccmHKSXXm9g",
+          authDomain: "mystical-slate-328706.firebaseapp.com",
+          projectId: "mystical-slate-328706",
+          storageBucket: "mystical-slate-328706.appspot.com",
+          messagingSenderId: "228543120587",
+          appId: "1:228543120587:web:215eaa3e3b17caf6b8074e",
+          measurementId: "G-8ZXRT33VWH"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+        document.getElementById('signUpButton').addEventListener('click', (event) => {
+            event.preventDefault()
+            const email = document.getElementById('signUpEmail').value
+            const password = document.getElementById('signUpPassword').value
+            const auth = getAuth();
+         
+        
+            
+  
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                  // Signed in 
+                  alert('계정이 등록되었습니다.')
+                  console.log('계정이 생성 완료')
+                  const user = userCredential.user;
+                  // ...
+                })
+                .catch((error) => {
+                alert('이메일 또는 비밀번호가 일치하지 않습니다.')
+                  console.log('회원가입 실패')
+                  const errorCode = error.code;
+                  const errorMessage = error.message;
+                  // ..
+            })
+        })
+    </script>
+</body>
+</html>
+
+
