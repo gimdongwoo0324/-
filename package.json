@@ -6,5 +6,20 @@
     "firebase": "^10.12.2",
     "git": "^0.1.5",
     "module-name": "^0.0.1-security"
+    },
+  "scripts": {
+    "start": "node ./website/app.js"
+  
   }
 }
+
+
+
+
+
+
+  
+  
+
+
+
