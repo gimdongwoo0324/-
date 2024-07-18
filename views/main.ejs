@@ -3,35 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://kit.fontawesome.com/ada1577b0c.js" crossorigin="anonymous"></script>
+
     <title>지르플란트 치과</title>
     <style>
         * {
             margin: 0px;
             padding: 0px;
+          
         }
         a{
             position:relative;
-            float: right
+            float: right;
+    
         }
 
-        .one {
-            
+        section img {
+            position: relative;
             background-image:url(https://takahashi-dendendentaro.com/wp-content/uploads/2023/06/access_img01.jpg);
             width: 100%;
-            height: 718px;
+            height: 1000px;
             opacity: 0.5;
             z-index: -1;
-   
+            background-size: cover;
+            overflow: hidden;
+           
         }
 
         .header {
-            display:flex;
-            width: 2080px;
-            margin: auto;
-          
-            height: 86px;
+            display: flex;
+            width: 100%;
+            margin: 0;
+            
+            height: 85px;
             background: lightskyblue;
-            background-size: cover;
+            overflow: hidden;
+ 
         }
 
         .nav {
@@ -41,7 +49,7 @@
             line-height: 86px;
             width:calc(1280px - 300px);
             color: #fff;
-      
+            
             
         }
 
@@ -56,8 +64,10 @@
             font-size:20px;
             cursor: pointer;
         }
+
+
         h1 {
-            position: relative;
+            position: absolute;
             left: 500px;
             bottom: 350px;
             color: white;
@@ -73,7 +83,7 @@
 
     p {
         
-            position: relative;
+            position: absolute;
             left: 500px;
             bottom: 300px;
             color: white;
@@ -114,35 +124,175 @@
 }
 
 
+footer {
+    display: flex;
+    flex-direction: row;
+
+    left: 0px;
+    width: 100%;
+    background-color: lightskyblue;
+    bottom: -160px;
+    position: absolute;
+
+    
+}
+
+footer > div {
+    margin-top: 15px;
+    margin-left: 150px;
+    margin-bottom: 15px
+}
+
+
+footer > div > ul > li {
+
+    color: grey;
+    list-style-type: none;
+    cursor: pointer;
+    position: relative;
+    left:0px;
+    line-height: normal;
+    color: white;
+    
+}
+
+footer > div> h3 {
+    margin-bottom: 15px;
+    bottom: -10px;
+    color: white;
+}
+
+footer div:nth-child(4n) > input {
+    border: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: none;
+    color: grey
+    
+}
+    
+footer div:nth-child(4n) > input:focus {
+    box-shadow: 1px 1px 5px 2px lightblue;
+}
+
+footer div:nth-child(4n) > input::placeholder {
+    color: grey;
+
+}
+
+footer div:nth-child(4n) > button {
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color:#1888f1;
+    color: white;
+}   
+
+footer div:nth-child(4n) > button:active {
+    transform: scale(1.05)
+}
+
     </style>
 </head>
 
 
 <body>
-    
-    <div class="wrap">
+    <header>
+        <div class="wrap">
         <div class="one">
-            <div class="header">
-                <ul class="nav">
-                    <li><a href="#" style="color: white;left: 500px">HOME</a></li>
-                    <li><a href="#" style="color: white;left: 500px">ABOUT</a></li>
-                    <li><a href="#" style="color: white;left: 500px">SERVICE</a></li>
-                    <li><a href="#" style="color: white;left: 500px">CONTACT</a></li>
-                    <li><a href="/" style="color: white;left: 500px;cursor:pointer"><button id="LOGOUT" style="cursor:pointer;color:aqua;border:7px solid lightcyan;font-size: 20px;background: lightcyan;border-radius: 5px;">LOG OUT</button></a></li>
-                </ul>
-        
+                <div class="header">
+                    <ul class="nav">
+                        <li><a href="#" style="color: white;left: 500px">HOME</a></li>
+                        <li><a href="#" style="color: white;left: 500px">ABOUT</a></li>
+                        <li><a href="#" style="color: white;left: 500px">SERVICE</a></li>
+                        <li><a href="#" style="color: white;left: 500px">CONTACT</a></li>
+                        <li><a href="/" style="color: white;left: 500px;cursor:pointer"><button id="Log_Out" style="cursor:pointer;color:aqua;border:7px solid lightcyan;font-size: 20px;background: lightcyan;border-radius: 5px;">LOG OUT</button></a></li>
+                    </ul>
+            
+                </div>
+             
             </div>
-         
         </div>
-    </div>
-    <h1>지르플란트 치과</h1>
-    <p>친절하고 안전하게 진찰해드립니다.</p>
+    
+    </header>
+    
+
+
+    <section>
+        <img> 
+        <h1>지르플란트 치과</h1>
+        <p>친절하고 안전하게 진찰해드립니다.</p>
+    </section>
+
+    
+
+
+    
+    <footer>
+
+        <div>
+            <h3>About</h3> 
+            <ul>
+                <li>Careers</li>
+                <li>Teams</li>
+                <li>Work</li>
+            </ul>    
+        </div>
+
+        <div>
+            <h3>Contact Us</h3> 
+            <ul>
+                <li>dobe300@gmail.com</li>
+                <li>(707)322-22-322</li>
+                <li>Richmond,VA,2203</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Social Media</h3>
+            <ul>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>Youtube</li>
+                <li>Twitter</li>
+            </ul>
+
+    
+        </div>
+
+        <div>
+            <h3>Join our Discord</h3>
+            <input id="textButton" type="text" placeholder="Enter your Username">
+            <button id="SignupBtn">Sign Up</button>
+        </div>
+
+    </footer>
     <script>
-        document.getElementById("LOGOUT").addEventListener('click', () => {
+
+
+        const text = document.querySelector("#textButton");
+        const SignupBtn = document.querySelector("#SignupBtn");
+
+        document.querySelector("#Log_Out").addEventListener("click", () => {
             alert("로그아웃 되었습니다.")
         })
+
+        SignupBtn.addEventListener("click", () => {
+            const email = text.value
+            if (email) {
+                
+                console.log(`입력한 값 : ${email}`)
+                text.value = ''
+            }else{
+                console.log("입력하시고 제출해주세요!")
+                text.value = ''
+            }
+        
+        })
+
+            
     </script>
-<body>
-    
 </body>
 </html>
